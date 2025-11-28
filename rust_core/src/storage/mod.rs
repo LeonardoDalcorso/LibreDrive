@@ -4,9 +4,11 @@
 
 mod erasure;
 mod file_manager;
+mod quota;
 
 pub use erasure::{ErasureEncoder, ErasureDecoder, ErasureConfig};
 pub use file_manager::{FileManager, FileMetadata, UploadProgress, DownloadProgress};
+pub use quota::{QuotaManager, QuotaConfig, UserQuota, QuotaCheckResult, QuotaSummary, NetworkStats};
 
 use thiserror::Error;
 
@@ -32,4 +34,7 @@ pub enum StorageError {
 
     #[error("Serialization error: {0}")]
     Serialization(String),
+
+    #[error("Quota exceeded: {0}")]
+    QuotaExceeded(String),
 }
