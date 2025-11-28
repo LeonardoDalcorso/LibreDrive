@@ -1,0 +1,43 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+*.lock
+.idea/
+*.log
+
+# Flutter app specific
+flutter_app/.dart_tool/
+flutter_app/build/
+flutter_app/.flutter-plugins
+flutter_app/.flutter-plugins-dependencies
+flutter_app/.packages
+flutter_app/ios/
+flutter_app/android/
+flutter_app/macos/
+flutter_app/linux/
+flutter_app/windows/
+flutter_app/web/
+
+# Rust
+rust_core/target/
+**/*.rs.bk
+Cargo.lock
+
+# macOS
+.DS_Store
+*.swp
+*.swo
+
+# IDE
+.vscode/
+*.sublime-*
+
+# Secrets
+.env
+*.pem
+*.key
+credentials.json
